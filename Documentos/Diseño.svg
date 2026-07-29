@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="3600"
-     height="4080"
+     width="100%"
+     height="auto"
      viewBox="0 0 1200 1360"
-     preserveAspectRatio="xMidYMid meet">
+     preserveAspectRatio="xMidYMid meet"
+     style="max-width:1200px;width:100%;height:auto;transition:transform .2s;transform-origin:center;">
   <defs>
     <!-- Estilos CSS Globales del SVG -->
     <style>
