@@ -1,0 +1,426 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1360" width="100%" height="100%">
+  <defs>
+    <!-- Estilos CSS Globales del SVG -->
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .title-side { font-size: 20px; font-weight: 800; fill: #334155; text-transform: uppercase; letter-spacing: 1.5px; }
+      .panel-bg { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; rx: 16px; }
+      .panel-dark-bg { fill: #0a1128; rx: 16px; }
+      .header-text { font-size: 11px; font-weight: 800; fill: #2563eb; letter-spacing: 1px; text-transform: uppercase; }
+      .panel-title { font-size: 22px; font-weight: 800; fill: #0f172a; }
+      .panel-title-dark { font-size: 26px; font-weight: 800; fill: #ffffff; }
+      .text-body { font-size: 12px; fill: #334155; line-height: 1.5; }
+      .text-muted { font-size: 11px; fill: #64748b; }
+      .text-bold { font-weight: 700; fill: #0f172a; }
+      .badge-text { font-size: 10px; font-weight: 700; fill: #60a5fa; }
+      .step-num { font-size: 12px; font-weight: 800; fill: #ffffff; }
+      .table-header { font-size: 11px; font-weight: 700; fill: #ffffff; }
+      .table-cell { font-size: 10px; fill: #334155; }
+      .table-cell-bold { font-size: 10px; font-weight: 700; fill: #0f172a; }
+    </style>
+
+    <!-- Patrón de fondo punteado para paneles claros -->
+    <pattern id="dot-pattern" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#cbd5e1" />
+    </pattern>
+
+    <!-- Patrón de fondo punteado para panel oscuro -->
+    <pattern id="dot-pattern-dark" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="rgba(255,255,255,0.08)" />
+    </pattern>
+
+    <!-- Clip path para tarjetas redondeadas -->
+    <clipPath id="card-clip">
+      <rect width="370" height="580" rx="16" />
+    </clipPath>
+  </defs>
+
+  <!-- Fondo General de Lienzo -->
+  <rect width="1200" height="1360" fill="#f1f5f9" />
+
+  <!-- ================================================================= -->
+  <!-- LADO A: EXTERIOR (PANEL 1, PANEL 2, PANEL 3)                      -->
+  <!-- ================================================================= -->
+  <g id="lado-a" transform="translate(15, 20)">
+    <text x="585" y="25" text-anchor="middle" class="font-sans title-side">LADO A (EXTERIOR)</text>
+    
+    <!-- Contenedor Base Lado A -->
+    <rect x="0" y="40" width="1170" height="610" rx="20" fill="#e2e8f0" />
+
+    <!-- PANEL 1: INTRODUCCIÓN -->
+    <g transform="translate(15, 55)">
+      <rect width="370" height="580" class="panel-bg" />
+      <rect width="370" height="580" fill="url(#dot-pattern)" clip-path="url(#card-clip)" />
+      
+      <!-- Encabezado -->
+      <g transform="translate(20, 25)">
+        <path d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm1 12H7V7h2v5zm0-6H7V4h2v2z" fill="#2563eb" transform="scale(0.9)"/>
+        <text x="20" y="11" class="font-sans header-text">PANEL 1 - INTRODUCCIÓN</text>
+        <line x1="0" y1="20" x2="330" y2="20" stroke="#cbd5e1" stroke-dasharray="3 3" />
+      </g>
+
+      <!-- Título y Texto -->
+      <text x="20" y="80" class="font-sans panel-title">¿Por qué Mantenimiento?</text>
+      
+      <text x="20" y="110" class="font-sans text-body">
+        <tspan x="20" dy="0">El mantenimiento preventivo sistemático es</tspan>
+        <tspan x="20" dy="18">fundamental para evitar la acumulación de polvo</tspan>
+        <tspan x="20" dy="18">higroscópico y controlar las microdescargas</tspan>
+        <tspan x="20" dy="18">electrostáticas (ESD), las cuales dañan las</tspan>
+        <tspan x="20" dy="18">compuertas de silicio integradas sin que el</tspan>
+        <tspan x="20" dy="18">técnico lo note a simple vista.</tspan>
+      </text>
+
+      <!-- Lista de Beneficios con Checkmarks -->
+      <g transform="translate(20, 240)">
+        <!-- Item 1 -->
+        <g transform="translate(0, 0)">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#2563eb" transform="scale(0.8)"/>
+          <text x="22" y="12" class="font-sans text-bold" font-size="12">Protección contra sobrevoltajes.</text>
+        </g>
+        <!-- Item 2 -->
+        <g transform="translate(0, 30)">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#2563eb" transform="scale(0.8)"/>
+          <text x="22" y="12" class="font-sans text-bold" font-size="12">Estabilidad de la pasta térmica.</text>
+        </g>
+        <!-- Item 3 -->
+        <g transform="translate(0, 60)">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#2563eb" transform="scale(0.8)"/>
+          <text x="22" y="12" class="font-sans text-bold" font-size="12">Evita el Thermal Throttling.</text>
+        </g>
+      </g>
+
+      <!-- Caja Azul - Objetivo -->
+      <g transform="translate(20, 470)">
+        <rect width="330" height="85" rx="12" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1" />
+        <text x="15" y="25" class="font-sans" font-size="12" font-weight="800" fill="#0369a1">Objetivo:</text>
+        <text x="15" y="45" class="font-sans" font-size="11" fill="#0369a1">
+          <tspan x="15" dy="0">Aplicar metodologías estructuradas para el</tspan>
+          <tspan x="15" dy="16">desmontaje, limpieza física y reensamble</tspan>
+          <tspan x="15" dy="16">de tarjetas integradas.</tspan>
+        </text>
+      </g>
+    </g>
+
+    <!-- PANEL 2: CONTRAPORTADA -->
+    <g transform="translate(400, 55)">
+      <rect width="370" height="580" class="panel-bg" />
+      <rect width="370" height="580" fill="url(#dot-pattern)" clip-path="url(#card-clip)" />
+
+      <!-- Encabezado -->
+      <g transform="translate(20, 25)">
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="#2563eb" transform="scale(0.8)"/>
+        <text x="20" y="11" class="font-sans header-text">PANEL 2 - CONTRAPORTADA</text>
+        <line x1="0" y1="20" x2="330" y2="20" stroke="#cbd5e1" stroke-dasharray="3 3" />
+      </g>
+
+      <text x="20" y="80" class="font-sans panel-title">Competencias Clave</text>
+
+      <!-- Competencias Numeradas -->
+      <g transform="translate(20, 115)">
+        <!-- 1 -->
+        <g transform="translate(0, 0)">
+          <rect width="24" height="24" rx="6" fill="#2563eb" />
+          <text x="12" y="16" text-anchor="middle" class="font-sans step-num">1</text>
+          <text x="36" y="12" class="font-sans text-body">
+            <tspan x="36" dy="0">Detección de fallas físicas mediante</tspan>
+            <tspan x="36" dy="16">diagnóstico visual veloz.</tspan>
+          </text>
+        </g>
+        <!-- 2 -->
+        <g transform="translate(0, 55)">
+          <rect width="24" height="24" rx="6" fill="#2563eb" />
+          <text x="12" y="16" text-anchor="middle" class="font-sans step-num">2</text>
+          <text x="36" y="12" class="font-sans text-body">
+            <tspan x="36" dy="0">Utilización sistemática de alcohol</tspan>
+            <tspan x="36" dy="16">isopropílico para desengrase.</tspan>
+          </text>
+        </g>
+        <!-- 3 -->
+        <g transform="translate(0, 110)">
+          <rect width="24" height="24" rx="6" fill="#2563eb" />
+          <text x="12" y="16" text-anchor="middle" class="font-sans step-num">3</text>
+          <text x="36" y="12" class="font-sans text-body">
+            <tspan x="36" dy="0">Gestión térmica y reemplazo de materiales</tspan>
+            <tspan x="36" dy="16">de interfaz de calor (TIM).</tspan>
+          </text>
+        </g>
+      </g>
+
+      <!-- Caja Alerta Roja -->
+      <g transform="translate(20, 310)">
+        <rect width="330" height="50" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1" />
+        <text x="165" y="30" text-anchor="middle" class="font-sans" font-size="10" font-weight="800" fill="#991b1b">
+          ⚠️ EXCLUSIVO PARA MANTENIMIENTO FÍSICO PREVENTIVO
+        </text>
+      </g>
+
+      <!-- Registro de Control -->
+      <g transform="translate(20, 480)">
+        <rect width="330" height="75" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+        <text x="15" y="22" class="font-sans text-bold" font-size="10" fill="#0f172a">REGISTRO DE CONTROL</text>
+        <text x="15" y="42" class="font-sans text-muted">Técnico: Estudiante de Práctica</text>
+        <text x="15" y="58" class="font-sans text-muted">Fecha: Julio, 2026</text>
+      </g>
+    </g>
+
+    <!-- PANEL 3: PORTADA -->
+    <g transform="translate(785, 55)">
+      <rect width="370" height="580" class="panel-dark-bg" />
+      <rect width="370" height="580" fill="url(#dot-pattern-dark)" clip-path="url(#card-clip)" />
+
+      <!-- Badge Superior -->
+      <g transform="translate(25, 30)">
+        <rect width="145" height="28" rx="14" fill="rgba(37,99,235,0.2)" stroke="rgba(59,130,246,0.4)" stroke-width="1" />
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="#60a5fa" stroke-width="2" transform="translate(10, 6) scale(0.6)"/>
+        <text x="32" y="18" class="font-sans badge-text">Práctica Profesional</text>
+      </g>
+
+      <!-- Título de Portada -->
+      <text x="25" y="105" class="font-sans panel-title-dark">
+        <tspan x="25" dy="0">Guía de</tspan>
+        <tspan x="25" dy="32">Mantenimiento</tspan>
+        <tspan x="25" dy="32">Preventivo de</tspan>
+        <tspan x="25" dy="32">Computadoras</tspan>
+      </text>
+
+      <text x="25" y="240" class="font-sans" font-size="12" fill="#94a3b8">
+        <tspan x="25" dy="0">Un manual didáctico y estandarizado para</tspan>
+        <tspan x="25" dy="18">aprender a preservar componentes, remover</tspan>
+        <tspan x="25" dy="18">impurezas de la circuitería integrada e</tspan>
+        <tspan x="25" dy="18">incrementar la eficiencia del CPU.</tspan>
+      </text>
+
+      <!-- Gráfico Chip Central -->
+      <g transform="translate(25, 350)">
+        <rect width="320" height="130" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+        <!-- Chip Vector Icon -->
+        <g transform="translate(136, 25)">
+          <rect x="4" y="4" width="40" height="40" rx="4" fill="none" stroke="#38bdf8" stroke-width="2"/>
+          <rect x="16" y="16" width="16" height="16" fill="none" stroke="#38bdf8" stroke-width="2"/>
+          <line x1="16" y1="0" x2="16" y2="4" stroke="#38bdf8" stroke-width="2"/>
+          <line x1="32" y1="0" x2="32" y2="4" stroke="#38bdf8" stroke-width="2"/>
+          <line x1="16" y1="44" x2="16" y2="48" stroke="#38bdf8" stroke-width="2"/>
+          <line x1="32" y1="44" x2="32" y2="48" stroke="#38bdf8" stroke-width="2"/>
+          <line x1="44" y1="16" x2="48" y2="16" stroke="#38bdf8" stroke-width="2"/>
+          <line x1="44" y1="32" x2="48" y2="32" stroke="#38bdf8" stroke-width="2"/>
+          <line x1="0" y1="16" x2="4" y2="16" stroke="#38bdf8" stroke-width="2"/>
+          <line x1="0" y1="32" x2="4" y2="32" stroke="#38bdf8" stroke-width="2"/>
+        </g>
+        <text x="160" y="102" text-anchor="middle" class="font-sans" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="1">PROCEDIMIENTO SEGURO</text>
+      </g>
+
+      <!-- Pie de Portada -->
+      <text x="185" y="540" text-anchor="middle" class="font-sans" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">ESTÁNDAR PROFESIONAL TÉCNICO</text>
+    </g>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- LADO B: INTERIOR (PANEL 4, PANEL 5, PANEL 6)                      -->
+  <!-- ================================================================= -->
+  <g id="lado-b" transform="translate(15, 690)">
+    <text x="585" y="25" text-anchor="middle" class="font-sans title-side">LADO B (INTERIOR)</text>
+    
+    <!-- Contenedor Base Lado B -->
+    <rect x="0" y="40" width="1170" height="610" rx="20" fill="#e2e8f0" />
+
+    <!-- PANEL 4: PREPARACIÓN -->
+    <g transform="translate(15, 55)">
+      <rect width="370" height="580" class="panel-bg" />
+      <rect width="370" height="580" fill="url(#dot-pattern)" clip-path="url(#card-clip)" />
+
+      <!-- Encabezado -->
+      <g transform="translate(20, 25)">
+        <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z" fill="#2563eb" transform="scale(0.7)"/>
+        <text x="20" y="11" class="font-sans header-text">PANEL 4 - PREPARACIÓN</text>
+        <line x1="0" y1="20" x2="330" y2="20" stroke="#cbd5e1" stroke-dasharray="3 3" />
+      </g>
+
+      <text x="20" y="75" class="font-sans panel-title">Materiales Indispensables</text>
+
+      <!-- Tabla Vectorial de Materiales (9 Items) -->
+      <g transform="translate(20, 90)">
+        <!-- Cabecera Tabla -->
+        <rect width="330" height="22" rx="4" fill="#0f172a" />
+        <text x="10" y="15" class="font-sans table-header">Material</text>
+        <text x="145" y="15" class="font-sans table-header">Uso Práctico</text>
+
+        <!-- Filas de Tabla -->
+        <!-- Fila 1 -->
+        <g transform="translate(0, 22)">
+          <line x1="0" y1="26" x2="330" y2="26" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="8" y="17" class="font-sans table-cell-bold">Destornilladores Phillips</text>
+          <text x="145" y="17" class="font-sans table-cell">Desmontar gabinete y partes.</text>
+        </g>
+        <!-- Fila 2 -->
+        <g transform="translate(0, 48)">
+          <line x1="0" y1="26" x2="330" y2="26" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="8" y="17" class="font-sans table-cell-bold">Brocha antiestática</text>
+          <text x="145" y="17" class="font-sans table-cell">Remover polvo de circuitos.</text>
+        </g>
+        <!-- Fila 3 -->
+        <g transform="translate(0, 74)">
+          <line x1="0" y1="26" x2="330" y2="26" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="8" y="17" class="font-sans table-cell-bold">Aire comprimido</text>
+          <text x="145" y="17" class="font-sans table-cell">Limpiar fans y disipadores.</text>
+        </g>
+        <!-- Fila 4 -->
+        <g transform="translate(0, 100)">
+          <line x1="0" y1="26" x2="330" y2="26" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="8" y="17" class="font-sans table-cell-bold">Alcohol isopropílico 90%+</text>
+          <text x="145" y="17" class="font-sans table-cell">Limpiar pasta y suciedad.</text>
+        </g>
+        <!-- Fila 5 -->
+        <g transform="translate(0, 126)">
+          <line x1="0" y1="26" x2="330" y2="26" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="8" y="17" class="font-sans table-cell-bold">Paños de microfibra</text>
+          <text x="145" y="17" class="font-sans table-cell">Limpieza de superficies.</text>
+        </g>
+        <!-- Fila 6 -->
+        <g transform="translate(0, 152)">
+          <line x1="0" y1="26" x2="330" y2="26" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="8" y="17" class="font-sans table-cell-bold">Hisopos</text>
+          <text x="145" y="17" class="font-sans table-cell">Alcohol en zonas pequeñas.</text>
+        </g>
+        <!-- Fila 7 -->
+        <g transform="translate(0, 178)">
+          <line x1="0" y1="26" x2="330" y2="26" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="8" y="17" class="font-sans table-cell-bold">Pasta térmica</text>
+          <text x="145" y="17" class="font-sans table-cell">Sustituir la pasta del CPU.</text>
+        </g>
+        <!-- Fila 8 -->
+        <g transform="translate(0, 204)">
+          <line x1="0" y1="26" x2="330" y2="26" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="8" y="17" class="font-sans table-cell-bold">Pulsera antiestática</text>
+          <text x="145" y="17" class="font-sans table-cell">Evitar cargas electrostáticas.</text>
+        </g>
+        <!-- Fila 9 -->
+        <g transform="translate(0, 230)">
+          <text x="8" y="17" class="font-sans table-cell-bold">Guantes de nitrilo</text>
+          <text x="145" y="17" class="font-sans table-cell">Mantener limpios componentes.</text>
+        </g>
+      </g>
+
+      <!-- Regla de Seguridad -->
+      <g transform="translate(20, 465)">
+        <rect width="330" height="95" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1" />
+        <text x="15" y="22" class="font-sans" font-size="11" font-weight="800" fill="#991b1b">Regla de Seguridad:</text>
+        <text x="15" y="42" class="font-sans" font-size="11" fill="#991b1b">
+          <tspan x="15" dy="0">Drena la energía residual de la tarjeta madre</tspan>
+          <tspan x="15" dy="16">pulsando el encendido del equipo desconectado</tspan>
+          <tspan x="15" dy="16">durante 5 segundos para vaciar los capacitores.</tspan>
+        </text>
+      </g>
+    </g>
+
+    <!-- PANEL 5: PROCEDIMIENTO -->
+    <g transform="translate(400, 55)">
+      <rect width="370" height="580" class="panel-bg" />
+      <rect width="370" height="580" fill="url(#dot-pattern)" clip-path="url(#card-clip)" />
+
+      <!-- Encabezado -->
+      <g transform="translate(20, 25)">
+        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" fill="#2563eb" transform="scale(0.8)"/>
+        <text x="20" y="11" class="font-sans header-text">PANEL 5 - PROCEDIMIENTO</text>
+        <line x1="0" y1="20" x2="330" y2="20" stroke="#cbd5e1" stroke-dasharray="3 3" />
+      </g>
+
+      <text x="20" y="80" class="font-sans panel-title">Limpieza Profunda</text>
+
+      <!-- Pasos 1 a 3 -->
+      <g transform="translate(20, 120)">
+        <!-- Paso 1 -->
+        <g transform="translate(0, 0)">
+          <rect width="24" height="24" rx="6" fill="#2563eb" />
+          <text x="12" y="16" text-anchor="middle" class="font-sans step-num">1</text>
+          <text x="36" y="12" class="font-sans text-body">
+            <tspan class="text-bold" x="36" dy="0">Desensamble Cuidadoso</tspan>
+            <tspan x="36" dy="18">Extrae de forma segura módulos como discos,</tspan>
+            <tspan x="36" dy="18">tarjetas de video dedicadas y RAM.</tspan>
+          </text>
+        </g>
+        <!-- Paso 2 -->
+        <g transform="translate(0, 100)">
+          <rect width="24" height="24" rx="6" fill="#2563eb" />
+          <text x="12" y="16" text-anchor="middle" class="font-sans step-num">2</text>
+          <text x="36" y="12" class="font-sans text-body">
+            <tspan class="text-bold" x="36" dy="0">Soplado de Placa</tspan>
+            <tspan x="36" dy="18">Sujeta de forma obligatoria las aspas de los</tspan>
+            <tspan x="36" dy="18">ventiladores. El soplado libre genera voltajes</tspan>
+            <tspan x="36" dy="18">inversos nocivos.</tspan>
+          </text>
+        </g>
+        <!-- Paso 3 -->
+        <g transform="translate(0, 220)">
+          <rect width="24" height="24" rx="6" fill="#2563eb" />
+          <text x="12" y="16" text-anchor="middle" class="font-sans step-num">3</text>
+          <text x="36" y="12" class="font-sans text-body">
+            <tspan class="text-bold" x="36" dy="0">Contactos de RAM</tspan>
+            <tspan x="36" dy="18">Usa goma de borrar blanca para restaurar los</tspan>
+            <tspan x="36" dy="18">contactos dorados. Quita los residuos de goma</tspan>
+            <tspan x="36" dy="18">con una brocha seca.</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+
+    <!-- PANEL 6: FASE CRÍTICA -->
+    <g transform="translate(785, 55)">
+      <rect width="370" height="580" class="panel-bg" />
+      <rect width="370" height="580" fill="url(#dot-pattern)" clip-path="url(#card-clip)" />
+
+      <!-- Encabezado -->
+      <g transform="translate(20, 25)">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#2563eb" transform="scale(0.8)"/>
+        <text x="20" y="11" class="font-sans header-text">PANEL 6 - FASE CRÍTICA</text>
+        <line x1="0" y1="20" x2="330" y2="20" stroke="#cbd5e1" stroke-dasharray="3 3" />
+      </g>
+
+      <text x="20" y="80" class="font-sans panel-title">Mantenimiento Térmico</text>
+
+      <!-- Pasos 4 a 6 -->
+      <g transform="translate(20, 120)">
+        <!-- Paso 4 -->
+        <g transform="translate(0, 0)">
+          <rect width="24" height="24" rx="6" fill="#2563eb" />
+          <text x="12" y="16" text-anchor="middle" class="font-sans step-num">4</text>
+          <text x="36" y="12" class="font-sans text-body">
+            <tspan class="text-bold" x="36" dy="0">Limpieza del IHS</tspan>
+            <tspan x="36" dy="18">Disuelve pasta endurecida con alcohol</tspan>
+            <tspan x="36" dy="18">isopropílico. Deja la base del CPU impecable.</tspan>
+          </text>
+        </g>
+        <!-- Paso 5 -->
+        <g transform="translate(0, 100)">
+          <rect width="24" height="24" rx="6" fill="#2563eb" />
+          <text x="12" y="16" text-anchor="middle" class="font-sans step-num">5</text>
+          <text x="36" y="12" class="font-sans text-body">
+            <tspan class="text-bold" x="36" dy="0">Aplicación de Pasta</tspan>
+            <tspan x="36" dy="18">Dispensa una gota tamaño grano de arroz en el</tspan>
+            <tspan x="36" dy="18">centro exacto. La presión del heatsink la</tspan>
+            <tspan x="36" dy="18">distribuirá sola.</tspan>
+          </text>
+        </g>
+        <!-- Paso 6 -->
+        <g transform="translate(0, 220)">
+          <rect width="24" height="24" rx="6" fill="#2563eb" />
+          <text x="12" y="16" text-anchor="middle" class="font-sans step-num">6</text>
+          <text x="36" y="12" class="font-sans text-body">
+            <tspan class="text-bold" x="36" dy="0">Verificación</tspan>
+            <tspan x="36" dy="18">Haz pruebas de inicio. Ingresa de inmediato al</tspan>
+            <tspan x="36" dy="18">menú de BIOS y vigila que la temperatura se</tspan>
+            <tspan x="36" dy="18">mantenga baja.</tspan>
+          </text>
+        </g>
+      </g>
+
+      <!-- Caja Verde de Éxito -->
+      <g transform="translate(20, 500)">
+        <rect width="330" height="50" rx="10" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+        <text x="165" y="30" text-anchor="middle" class="font-sans" font-size="12" font-weight="800" fill="#065f46">
+          ✓ ¡Mantenimiento Completado con Éxito!
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
