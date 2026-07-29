@@ -4,4 +4,6 @@
 
 
 
-<img title="" src="./Diseño.svg" alt="" width="732">
+<img title="" src="Diseño.svg" alt="" width="676" data-align="center">
+
+
